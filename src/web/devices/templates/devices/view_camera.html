@@ -1,0 +1,21 @@
+{% extends 'devices/base.html'%}
+
+{% block title %}Iris | Manage: {{ device.name }}{% endblock %}
+
+{% block body %}
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <h1 class="display-4">View Camera</h1>
+                <hr>
+{#                <a href="{% url 'devices:index' %}" class="btn btn-sm btn-dark">&lt; Back to devices</a><br>#}
+                <h2 class="text-muted">{{ device.name }}</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <img id="camera-img-full" class="img-fluid rounded mx-auto d-block" src="{{ device.last_image_url }}" alt="{{ device.name }}" onerror="this.src='http://via.placeholder.com/640x480?text={{ device.name }}+Offline'"><br>
+            </div>
+        </div>
+    </div>
+{% endblock %}

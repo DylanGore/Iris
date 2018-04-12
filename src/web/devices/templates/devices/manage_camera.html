@@ -1,0 +1,49 @@
+{% extends 'devices/base.html'%}
+
+{% block title %}Iris | Manage: {{ device.name }}{% endblock %}
+
+{% block body %}
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <h1 class="display-4">Manage Camera</h1>
+                <hr>
+{#                <a href="{% url 'devices:index' %}" class="btn btn-sm btn-dark">&lt; Back to devices</a><br>#}
+                <h2 class="text-muted">{{ device.name }}</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <img class="img-fluid rounded" src="{{ device.last_image_url }}" alt="{{ device.name }}" onerror="this.src='http://via.placeholder.com/640x480?text={{ device.name }}+Offline'">
+            </div>
+            <div class="col-md-6">
+                <ul class="list-group">
+                    <li class="list-group-item"><strong>Name:</strong> {{ device.name }}</li>
+                    <li class="list-group-item"><strong>Location:</strong> {{ device.location }}</li>
+                    <li class="list-group-item"><strong>Owner:</strong> {{ device.owner_name }} <span class="todo">//TODO</span></li>
+                    <li class="list-group-item"><strong>Last Activated:</strong> {{ device.last_active }} <span class="todo">//TODO</span></li>
+                    {% if device.is_active %}
+                        <li class="list-group-item"><strong>IP Address:</strong> {{ device.ip_address }} <span class="todo">//TODO</span></li>
+                        <li class="list-group-item list-group-item-success text-center">Online <span class="todo">//TODO</span></li>
+                    {% else %}
+                        <li class="list-group-item list-group-item-danger text-center">Offline <span class="">//TODO</span></li>
+                    {% endif %}
+                </ul>
+                <div class="btn-toolbar" role="toolbar">
+                    <div class="btn-group mr-2" role="group">
+                        <button type="button" class="btn btn-dark"><i class="fas fa-camera"></i> Take Snapshot</button>
+{#                        <button type="button" class="btn btn-dark"><i class="fas fa-video"></i> View Live Feed</button>#}
+                    </div>
+                    {% if device.has_sound %}
+                    <div class="btn-group mr-2" role="group">
+                        <button type="button" class="btn btn-warning"><i class="fas fa-volume-up"></i> Buzz</button>
+                    </div>
+                    {% endif %}
+                    <div class="btn-group mr-2" role="group">
+                        <button type="button" class="btn btn-info"><i class="fas fa-sync"></i> Refresh</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

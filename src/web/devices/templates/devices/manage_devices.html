@@ -1,0 +1,68 @@
+{% extends 'devices/base.html' %}
+
+{% block title %}Iris | All Devices{% endblock %}
+
+{% block body %}
+    <div class="container">
+        <div class="row">
+            <div class="col animated fadeIn">
+                <h1 class="display-4">Device Manager</h1>
+                <hr>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <h2 class="text-muted animated fadeIn">Cameras</h2>
+                <div class="card-group">
+                    {% for camera in all_cameras %}
+                        <div class="col-12 col-md-4">
+                            <div class="card animated slideInLeft">
+{#                                <img class="card-img-top" src="{{ camera.last_image_url }}" alt="{{ camera.name }} + ' image">#}
+                                <div class="card-body">
+                                    {% if camera.is_active %}
+                                        <h5 class="card-title"><i class="fas fa-camera"></i> {{ camera.name }} <span class="badge badge-success float-right">Online</span></h5>
+                                    {% else %}
+                                        <h5 class="card-title"><i class="fas fa-camera"></i> {{ camera.name }} <span class="badge badge-danger float-right">Offline</span></h5>
+                                    {% endif %}
+{#                                    <p class="card-text"><i class="fas fa-map"></i> {{ camera.location }}</p>#}
+                                    <a href="{% url 'devices:manage_camera' camera.id %}" class="btn btn-sm btn-secondary btn-block"><i class="fas fa-cog"></i> Manage Device</a>
+                                    <a href="{% url 'devices:view_camera' camera.id %}" class="btn btn-sm btn-info btn-block"><i class="fas fa-desktop"></i> View Camera Feed</a>
+                                </div>
+                                <div class="card-footer">
+                                    <small class="text-muted"><strong>Last Updated:</strong> {{ camera.last_active }}</small>
+                                </div>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <hr>
+                <h2 class="text-muted animated fadeIn">Motion Detectors</h2>
+                <div class="card-group">
+                    {% for detector in all_detectors %}
+                        <div class="col-12 col-md-4">
+                            <div class="card animated slideInLeft">
+                                <div class="card-body">
+                                    {% if detector.is_active %}
+                                        <h5 class="card-title"><i class="fas fa-camera"></i> {{ detector.name }} <span class="badge badge-success float-right">Online</span></h5>
+                                    {% else %}
+                                        <h5 class="card-title"><i class="fas fa-camera"></i> {{ detector.name }} <span class="badge badge-danger float-right">Offline</span></h5>
+                                    {% endif %}
+{#                                    <p class="card-text"><i class="fas fa-map"></i> {{ camera.location }}</p>#}
+                                    <a href="{% url 'devices:manage_detector' detector.id %}" class="btn btn-sm btn-secondary btn-block"><i class="fas fa-cog"></i> Manage Device</a>
+                                </div>
+                                <div class="card-footer">
+                                    <small class="text-muted"><strong>Last Triggered:</strong> {{ detector.last_triggered }}</small>
+                                </div>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+            <hr>
+        </div>
+    </div>
+{% endblock %}

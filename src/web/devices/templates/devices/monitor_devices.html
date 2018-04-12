@@ -1,0 +1,52 @@
+{% extends 'devices/base.html' %}
+
+{% block title %}Iris | Monitor Devices{% endblock %}
+
+{% block body %}
+    <div class="container">
+        <div class="row">
+            <div class="col animated fadeIn">
+                <h1 class="display-4">Monitoring Dashboard</h1>
+                <hr>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <h2 class="text-muted animated fadeIn">Cameras</h2>
+                <div class="card-group">
+                    {% for camera in all_cameras %}
+                        <div class="col-12 col-md-3">
+                            <div class="card animated slideInLeft">
+                                <img class="card-img-top" src="{{ camera.last_image_url }}" alt="{{ camera.name }}" onerror="this.src='http://via.placeholder.com/640x480?text={{ camera.name }}+Offline'" >
+                                <div class="card-footer">
+                                    <small class="text-muted">{{ camera.name }}</small>
+                                </div>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <hr>
+                <h2 class="text-muted animated fadeIn">Motion Detectors</h2>
+                <div class="card-group">
+                    {% for detector in all_detectors %}
+                        <div class="col-12 col-md-3">
+                            <div class="card animated slideInLeft">
+                                <div class="card-body">
+                                    <strong>Status:</strong> <span class="badge badge-info">No Motion Detected</span>
+                                </div>
+                                <div class="card-footer">
+                                    <small class="text-muted">{{ detector.name }}</small>
+                                </div>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+            <hr>
+        </div>
+    </div>
+{% endblock %}
