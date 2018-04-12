@@ -18,7 +18,7 @@
     <link rel="shortcut icon" href="https://raw.githubusercontent.com/DylanGore/Iris/master/assets/branding/favicon.ico" type="image/x-icon">
     <link rel="icon" href="https://raw.githubusercontent.com/DylanGore/Iris/master/assets/branding/favicon.ico" type="image/x-icon">
 
-    <title>Iris</title>
+    <title>Iris | Documentation</title>
 </head>
 <body>
 	<header>
@@ -38,7 +38,7 @@
                         <a class="nav-link" href="about.html"><i class="fa fa-info-circle"></i>&nbsp;About</a>
                     </li>
                     <li class="nav-item">
-                       <a class="nav-link" href="docs.html"><i class="fa fa-book"></i>&nbsp;Documentation</a>
+                        <a class="nav-link" href="docs.html"><i class="fa fa-book"></i>&nbsp;Documentation</a>
                     </li>
                 </ul>
             </div>
@@ -46,12 +46,63 @@
     </header>
 
    <main class="animated fadeIn">
-        <div class="container-fluid">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <h1 class="text-center">Documentation</h1>
+                    <hr>
+                    <p>
+                        Table of Contents:
+                        <ol>
+                            <li><a href="#rpi-initial-setup">Raspberry Pi Initial Setup</a></li>
+                        </ol>
+                    </p>
+                    <hr>
+                </div>
+            </div>
             <div class="row">
                 <div class="col-sm-12">
-                    <img src="https://github.com/DylanGore/Iris/blob/master/assets/branding/iris-logo.png?raw=true" alt="Iris Logo" class="img-fluid mx-auto d-block" id="index-logo">
-                    <h1 class="display-4 text-center">Internet of Things Project</h1>
-                    <p class="lead text-center">Semester 2 (Year 1)</p>
+                    <h2 class="display-4" id="rpi-initial-setup">Raspberry Pi Initial Setup</h2>
+                     <p>
+                        <ol>
+                            <li>This guide assumes that you have already setup network and users</li>
+                            <li>
+                                Update the Pi<br>
+                                <code>
+                                    $ sudo apt update -y && sudo apt upgrade -y
+                                </code>
+                            </li>
+                            <li>
+                                Configure the Pi
+                                <ol>
+                                    <li><code>
+                                            $ sudo raspi-config
+                                        </code><br></li>
+                                    <li>
+                                            Enable the camera module<br>
+                                            go to <i>Interfacing Options</i> and enable the camera module.
+                                    </li>
+                                    <li>
+                                            Expand the file system<br>
+                                            go to <i>Advanced options</i> and <i>Expand file system</i>.
+                                    </li>
+                                    <li>
+                                            Reboot <br>
+                                            <code>$ sudo reboot now</code>
+                                    </li>
+                                </ol>
+                            </li>
+                            <li>
+                                Update the firmware<br>
+                                <code>$ sudo rpi-update </code>
+                            </li>
+                            <li>
+                                Reboot<br>
+                                <code>$ sudo reboot now</code>
+                            </li>
+                        </ol>
+                     </p>
+                     <hr>
                 </div>
             </div>
         </div>
