@@ -13,4 +13,4 @@ class Camera(models.Model):
     has_motion = models.BooleanField(default=False)
 
     def __str__(self):
-        return self.name + '[' + self.location + ']'
+        return self.name + ' [' + self.location + ' | ' + self.ip_address + ']'
