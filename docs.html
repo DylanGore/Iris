@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	
+	<!-- Load CSS/Font Awesome -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.5.2/animate.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.1.0/css/flag-icon.min.css">
+	<!-- Font Awesome -->
+    <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/solid.js" integrity="sha384-+Ga2s7YBbhOD6nie0DzrZpJes+b2K1xkpKxTFFcx59QmVPaSA8c7pycsNaFwUK6l" crossorigin="anonymous"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/brands.js" integrity="sha384-sCI3dTBIJuqT6AwL++zH7qL8ZdKaHpxU43dDt9SyOzimtQ9eyRhkG3B7KMl6AO19" crossorigin="anonymous"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/fontawesome.js" integrity="sha384-7ox8Q2yzO/uWircfojVuCQOZl+ZZBg2D2J5nkpLqzH1HY0C1dHlTKIbpRz/LG23c" crossorigin="anonymous"></script>
+
+    <link rel="shortcut icon" href="https://raw.githubusercontent.com/DylanGore/Iris/master/assets/branding/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="https://raw.githubusercontent.com/DylanGore/Iris/master/assets/branding/favicon.ico" type="image/x-icon">
+
+    <title>Iris | Documentation</title>
+</head>
+<body>
+	<header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <a href="https://dylangore.github.io/Iris" class="navbar-brand"><i class="fas fa-eye"></i> Iris</a>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#topNav" aria-controls="topNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="topNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://dylangore.github.io/Iris"><i class="fa fa-home"></i>&nbsp;Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html"><i class="fa fa-info-circle"></i>&nbsp;About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="docs.html"><i class="fa fa-book"></i>&nbsp;Documentation</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+   <main class="animated fadeIn">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <h1 class="text-center">Documentation</h1>
+                    <hr>
+                    <p>
+                        Table of Contents:
+                        <ol>
+                            <li><a href="#rpi-initial-setup">Raspberry Pi Initial Setup</a></li>
+                        </ol>
+                    </p>
+                    <hr>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <h2 class="display-4" id="rpi-initial-setup">Raspberry Pi Initial Setup</h2>
+                     <p>
+                        <ol>
+                            <li>This guide assumes that you have already setup network and users</li>
+                            <li>
+                                Update the Pi<br>
+                                <code>
+                                    $ sudo apt update -y && sudo apt upgrade -y
+                                </code>
+                            </li>
+                            <li>
+                                Configure the Pi
+                                <ol>
+                                    <li><code>
+                                            $ sudo raspi-config
+                                        </code><br></li>
+                                    <li>
+                                            Enable the camera module<br>
+                                            go to <i>Interfacing Options</i> and enable the camera module.
+                                    </li>
+                                    <li>
+                                            Expand the file system<br>
+                                            go to <i>Advanced options</i> and <i>Expand file system</i>.
+                                    </li>
+                                    <li>
+                                            Reboot <br>
+                                            <code>$ sudo reboot now</code>
+                                    </li>
+                                </ol>
+                            </li>
+                            <li>
+                                Update the firmware<br>
+                                <code>$ sudo rpi-update </code>
+                            </li>
+                            <li>
+                                Reboot<br>
+                                <code>$ sudo reboot now</code>
+                            </li>
+                        </ol>
+                     </p>
+                     <hr>
+                     <br>
+                     <br>
+                     <br>
+                     <br>
+                </div>
+            </div>
+        </div>
+   </main>
+
+    <footer class="page-footer bg-dark center-text">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <p class="text-center">
+                        <span class="float-left" id="copyright-text">&copy; 2018 <a class="footer-link" href="https://dylangore.ie" target="_blank">Dylan Gore</a>.</span>
+                        <a href="https://github.com/DylanGore/Iris" target="_blank" title="Iris on Github" class="float-right footer-link" id="github-link"><i class="fab fa-github"></i> View on Github</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+	
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </body>
+</html>
