@@ -8,8 +8,12 @@
             <div class="col-sm-12">
                 <img src="{% static 'devices/img/logo.png' %}" alt="Iris Logo" class="img-fluid mx-auto d-block" id="index-logo">
                 <h1 class="display-4 text-center">Devices</h1>
-                <p class="lead text-center">Click on the link above to view the status of all devices.</p>
-{#                    <br> If you are not logged in, you must <a href="#">log in</a> as an authorised user before you can continue.</p>#}
+                <hr>
+                {% if user.is_authenticated %}
+                    <p class="lead text-center">Click on the link above to view the status of all devices.</p>
+                {% else %}
+                    <p class="lead text-center">You must <a href="{% url 'login' %}">log in</a> to continue.</p>
+                {% endif %}
             </div>
         </div>
     </div>

@@ -46,12 +46,12 @@
                 {% endif %}
                 <ul class="navbar-nav">
                     {% if user.is_authenticated %}
-                        <li class="nav-item">
+                        <li class="nav-item disabled">
                             <a href="#" class="nav-link"><i class="fas fa-user-circle"></i> {{ user.first_name }} {{ user.last_name }}</a>
                         </li>
                         {% if user.is_staff %}
                             <li class="nav-item">
-                                <a href="{% url 'admin:index' %}" class="nav-link">Admin</a>
+                                <a href="{% url 'admin:index' %}" class="nav-link"><i class="fas fa-cogs"></i></a>
                             </li>
                         {% endif %}
                         <li class="nav-item">
