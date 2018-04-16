@@ -10,5 +10,4 @@ urlpatterns = [
     path('monitor/', views.monitor_devices, name='monitor_devices'),
     path('manage/camera/<int:device_id>/', views.manage_camera, name='manage_camera'),
     path('view/camera/<int:device_id>/', views.view_camera, name='view_camera'),
-    path('manage/detector/<int:device_id>/', views.manage_detector, name='manage_detector'),
 ]

@@ -100,8 +100,9 @@ ENV/
 # mypy
 .mypy_cache/
 
-# Databases
-db.sqlite3
-
 # IDEA
 .idea/
+
+#Django
+migrations/
+db.sqlite3

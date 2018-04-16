@@ -27,26 +27,5 @@
                 </div>
             </div>
         </div>
-        <div class="row">
-            <div class="col">
-                <hr>
-                <h2 class="text-muted animated fadeIn">Motion Detectors</h2>
-                <div class="card-group">
-                    {% for detector in all_detectors %}
-                        <div class="col-12 col-md-3">
-                            <div class="card animated slideInLeft">
-                                <div class="card-body">
-                                    <strong>Status:</strong> <span class="badge badge-info">No Motion Detected</span>
-                                </div>
-                                <div class="card-footer">
-                                    <small class="text-muted">{{ detector.name }}</small>
-                                </div>
-                            </div>
-                        </div>
-                    {% endfor %}
-                </div>
-            </div>
-            <hr>
-        </div>
     </div>
 {% endblock %}

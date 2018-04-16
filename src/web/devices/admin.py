@@ -1,5 +1,4 @@
 from django.contrib import admin
-from .models import *
+from .models import Camera
 
 admin.site.register(Camera)
-admin.site.register(MotionDetector)
