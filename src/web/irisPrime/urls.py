@@ -21,6 +21,7 @@ from irisPrime import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('devices/', include('devices.urls'), name="devices"),
+    path('users/', include('users.urls'), name="users"),
     path('accounts/', include('django.contrib.auth.urls')),
     path('', views.index, name='index'),
 ]

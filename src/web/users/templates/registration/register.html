@@ -1,0 +1,27 @@
+{% extends 'devices/base.html' %}
+{% load staticfiles %}
+{% load bootstrap4 %}
+
+{% bootstrap_messages %}
+
+
+{% block body %}
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <h1 class="display-4 text-center">Create an Account</h1>
+                <hr>
+                <form class="form" method="post" action="{% url 'register' %}">
+                    {% csrf_token %}
+
+                    {% bootstrap_form form %}
+
+                    {% buttons %}
+                        <button type="submit" class="btn btn-dark">Register</button>
+                    {% endbuttons %}
+                </form>
+                <p>Already have an account? <a href="{% url 'login' %}">Log in</a>.</p>
+            </div>
+        </div>
+    </div>
+{% endblock %}

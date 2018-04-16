@@ -8,7 +8,6 @@
             <div class="col-sm-12">
                 <h1 class="display-4">Manage Camera</h1>
                 <hr>
-{#                <a href="{% url 'devices:index' %}" class="btn btn-sm btn-dark">&lt; Back to devices</a><br>#}
                 <h2 class="text-muted">{{ device.name }}</h2>
             </div>
         </div>
@@ -20,11 +19,10 @@
                 <ul class="list-group">
                     <li class="list-group-item"><strong>Name:</strong> {{ device.name }}</li>
                     <li class="list-group-item"><strong>Location:</strong> {{ device.location }}</li>
-                    <li class="list-group-item"><strong>Owner:</strong> {{ device.owner_name }} <span class="todo">//TODO</span></li>
-                    <li class="list-group-item"><strong>Last Activated:</strong> {{ device.last_triggered }} <span class="todo">//TODO</span></li>
+                    <li class="list-group-item"><strong>Last Activated:</strong> {{ device.last_triggered }}</li>
                     {% if device.is_active %}
-                        <li class="list-group-item"><strong>IP Address:</strong> {{ device.ip_address }} <span class="todo">//TODO</span></li>
-                        <li class="list-group-item list-group-item-success text-center">Online <span class="todo">//TODO</span></li>
+                        <li class="list-group-item"><strong>IP Address:</strong> {{ device.ip_address }}</li>
+                        <li class="list-group-item list-group-item-success text-center">Online</li>
                     {% else %}
                         <li class="list-group-item list-group-item-danger text-center">Offline <span class="">//TODO</span></li>
                     {% endif %}
