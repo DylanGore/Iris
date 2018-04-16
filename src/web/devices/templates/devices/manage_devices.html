@@ -17,7 +17,6 @@
                     {% for camera in all_cameras %}
                         <div class="col-12 col-md-4">
                             <div class="card animated slideInLeft">
-{#                                <img class="card-img-top" src="{{ camera.last_image_url }}" alt="{{ camera.name }} + ' image">#}
                                 <div class="card-body">
                                     {% if camera.is_active %}
                                         <h5 class="card-title"><i class="fas fa-camera"></i> {{ camera.name }} <span class="badge badge-success float-right">Online</span></h5>

@@ -47,8 +47,13 @@
                 <ul class="navbar-nav">
                     {% if user.is_authenticated %}
                         <li class="nav-item">
-                            <a href="#" class="nav-link"><i class="fas fa-user-circle"></i> {{ user.username }}</a>
+                            <a href="#" class="nav-link"><i class="fas fa-user-circle"></i> {{ user.first_name }} {{ user.last_name }}</a>
                         </li>
+                        {% if user.is_staff %}
+                            <li class="nav-item">
+                                <a href="{% url 'admin:index' %}" class="nav-link">Admin</a>
+                            </li>
+                        {% endif %}
                         <li class="nav-item">
                             <a href="{% url 'logout' %}" class="nav-link"><i class="fas fa-sign-out-alt"></i></a>
                         </li>
