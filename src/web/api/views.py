@@ -7,3 +7,4 @@ from devices.models import Camera
 class CameraView(viewsets.ModelViewSet):
     queryset = Camera.objects.all()
     serializer_class = CameraSerializer
+
