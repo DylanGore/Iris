@@ -1,4 +1,4 @@
-{% extends 'devices/../../../users/templates/users/unauthenticated.html' %}
+{% extends 'devices/base.html' %}
 
 {% block title %}Iris | All Devices{% endblock %}
 
@@ -15,7 +15,7 @@
                 {% if not all_cameras.count == 0 %}
                     <h2 class="text-muted animated fadeIn">Cameras</h2>
                 {% else %}
-                    <h2 class="text-muted text-center animated fadeIn">You do not have any registered cameras.</h2>
+                    <h2 class="text-muted text-center animated fadeIn">You do not currently have any registered cameras.</h2>
                 /{% endif %}
                 <div class="card-group">
                     {% for camera in all_cameras %}
