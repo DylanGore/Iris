@@ -1,0 +1,21 @@
+{% extends 'devices/base.html' %}
+{% load staticfiles %}
+
+{% block title %}Iris | Error 400 - Server Error{% endblock %}
+
+{% block body %}
+    {% if user.is_authenticated %}
+    {% else %}
+        <div class="container text-center">
+            <div class="row">
+                <div class="col-sm-12">
+                    <h1 class="display-4"><i class="fas fa-exclamation-circle"></i><br>Error 500</h1>
+                    <h2 class="display-4">Server Error</h2>
+                    <hr>
+                    <p class="lead">An internal server error has occurred!</p>
+                    <p><a href="{% url 'devices:index' %}" title="Login">Go back to the home page</a></p>
+                </div>
+            </div>
+        </div>
+    {% endif %}
+{% endblock %}

@@ -1,5 +1,5 @@
+from django.core.exceptions import PermissionDenied
 from django.shortcuts import render, get_object_or_404
-
 from .models import Camera
 
 
@@ -19,7 +19,7 @@ def manage_devices(request):
     if request.user.is_authenticated:
         return render(request, 'devices/manage_devices.html', {'all_cameras': all_cameras})
     else:
-        return render(request, 'users/unauthenticated.html')
+        raise PermissionDenied
 
 
 # Devices List View - Monitoring
@@ -33,7 +33,7 @@ def monitor_devices(request):
     if request.user.is_authenticated:
         return render(request, 'devices/monitor_devices.html', {'all_cameras': all_cameras})
     else:
-        return render(request, 'users/unauthenticated.html')
+        raise PermissionDenied
 
 
 # Specific Camera Info
@@ -42,7 +42,7 @@ def manage_camera(request, device_id):
     if request.user.is_authenticated and (device.owner_name == request.user.username or request.user.is_staff):
         return render(request, 'devices/manage_camera.html', {'device': device})
     else:
-        return render(request, 'users/unauthenticated.html')
+        raise PermissionDenied
 
 
 # View Camera Feed Full Screen
@@ -51,5 +51,4 @@ def view_camera(request, device_id):
     if request.user.is_authenticated and (device.owner_name == request.user.username or request.user.is_staff):
         return render(request, 'devices/view_camera.html', {'device': device})
     else:
-        return render(request, 'users/unauthenticated.html')
-
+        raise PermissionDenied
