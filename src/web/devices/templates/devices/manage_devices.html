@@ -12,7 +12,11 @@
         </div>
         <div class="row">
             <div class="col">
-                <h2 class="text-muted animated fadeIn">Cameras</h2>
+                {% if not all_cameras.count == 0 %}
+                    <h2 class="text-muted animated fadeIn">Cameras</h2>
+                {% else %}
+                    <h2 class="text-muted text-center animated fadeIn">You do not have any registered cameras.</h2>
+                /{% endif %}
                 <div class="card-group">
                     {% for camera in all_cameras %}
                         <div class="col-12 col-md-4">
@@ -23,6 +27,7 @@
                                     {% else %}
                                         <h5 class="card-title"><i class="fas fa-camera"></i> {{ camera.name }} <span class="badge badge-danger float-right">Offline</span></h5>
                                     {% endif %}
+                                    <hr>
 {#                                    <p class="card-text"><i class="fas fa-map"></i> {{ camera.location }}</p>#}
                                     <a href="{% url 'devices:manage_camera' camera.id %}" class="btn btn-sm btn-secondary btn-block"><i class="fas fa-cog"></i> Manage Device</a>
                                     <a href="{% url 'devices:view_camera' camera.id %}" class="btn btn-sm btn-info btn-block"><i class="fas fa-desktop"></i> View Camera Feed</a>

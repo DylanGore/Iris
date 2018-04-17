@@ -12,7 +12,11 @@
         </div>
         <div class="row">
             <div class="col">
-                <h2 class="text-muted animated fadeIn">Cameras</h2>
+                {% if not all_cameras.count == 0 %}
+                    <h2 class="text-muted animated fadeIn">Cameras</h2>
+                {% else %}
+                    <h2 class="text-muted text-center animated fadeIn">You do not have any registered cameras.</h2>
+                /{% endif %}
                 <div class="card-group">
                     {% for camera in all_cameras %}
                         <div class="col-12 col-md-3">
