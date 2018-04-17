@@ -23,5 +23,6 @@ urlpatterns = [
     path('devices/', include('devices.urls'), name="devices"),
     path('users/', include('users.urls'), name="users"),
     path('accounts/', include('django.contrib.auth.urls')),
+    path('api/', include('api.urls'), name="api"),
     path('', views.index, name='index'),
 ]
