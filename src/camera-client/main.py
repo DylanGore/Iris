@@ -6,6 +6,7 @@ import subprocess as sp
 from time import sleep
 from helper import *
 import camera 
+import api
 
 camera_running = False
 camera_time = 6
@@ -27,6 +28,7 @@ try:
 		mtnInput = getGPIOInput(mtnPin)
 		if mtnInput == False:
 			log('MAIN - Motion Detected!')
+			api.updateTrigger(1)
 			buzzer.buzz()
 			camera_running = True
 			sleep(0.2)
