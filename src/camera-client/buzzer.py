@@ -1,11 +1,9 @@
 #! /usr/bin/python3
 
 import RPi.GPIO as GPIO
+from variables import BUZZER_PIN as buzzPin
 from time import sleep
 from helper import *
-
-#Pin Declare
-buzzPin = 12
 
 setupGPIOBoard()
 setupGPIOOutput(12)

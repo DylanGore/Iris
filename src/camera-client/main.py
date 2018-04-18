@@ -5,14 +5,15 @@ import buzzer as buzzer
 import subprocess as sp
 from time import sleep
 from helper import *
+import variables
 import camera 
 import api
 
 camera_running = False
-camera_time = 6
+camera_time = variables.CAMERA_RUN_TIME
 
 #Pin Declare
-mtnPin = 16 # connected to pin 16
+mtnPin = variables.MOTION_DETECTOR_PIN
 
 setupGPIOBoard()
 setupGPIOInput(mtnPin)

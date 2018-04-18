@@ -3,13 +3,14 @@
 import requests
 import time
 import datetime
+import variables as variables
 from helper import log
 
-access_token = 'IRIS_API_KEY'
+access_token = variables.IRIS_API_KEY
 
 headers = {'Authorization': 'Bearer ' + access_token}
 cam_id = 1
-url = 'http://127.0.0.1:8000/api/cameras/' + str(cam_id) + '/'
+url = variables.IRIS_API_URL_BASE + str(cam_id) + '/'
 data = {}
 
 def updateIP(id, ip):
