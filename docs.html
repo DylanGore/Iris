@@ -1,133 +1,300 @@
 <!doctype html>
 <html lang="en">
+
 <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	
-	<!-- Load CSS/Font Awesome -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-	<link rel="stylesheet" type="text/css" href="css/style.css">
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.5.2/animate.min.css">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.1.0/css/flag-icon.min.css">
-	<!-- Font Awesome -->
-    <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/solid.js" integrity="sha384-+Ga2s7YBbhOD6nie0DzrZpJes+b2K1xkpKxTFFcx59QmVPaSA8c7pycsNaFwUK6l" crossorigin="anonymous"></script>
-    <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/brands.js" integrity="sha384-sCI3dTBIJuqT6AwL++zH7qL8ZdKaHpxU43dDt9SyOzimtQ9eyRhkG3B7KMl6AO19" crossorigin="anonymous"></script>
-    <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/fontawesome.js" integrity="sha384-7ox8Q2yzO/uWircfojVuCQOZl+ZZBg2D2J5nkpLqzH1HY0C1dHlTKIbpRz/LG23c" crossorigin="anonymous"></script>
+
+    <!-- Load CSS/Font Awesome -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.5.2/animate.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.1.0/css/flag-icon.min.css">
+    <!-- Font Awesome -->
+    <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/solid.js" integrity="sha384-+Ga2s7YBbhOD6nie0DzrZpJes+b2K1xkpKxTFFcx59QmVPaSA8c7pycsNaFwUK6l"
+        crossorigin="anonymous"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/brands.js" integrity="sha384-sCI3dTBIJuqT6AwL++zH7qL8ZdKaHpxU43dDt9SyOzimtQ9eyRhkG3B7KMl6AO19"
+        crossorigin="anonymous"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/fontawesome.js" integrity="sha384-7ox8Q2yzO/uWircfojVuCQOZl+ZZBg2D2J5nkpLqzH1HY0C1dHlTKIbpRz/LG23c"
+        crossorigin="anonymous"></script>
 
     <link rel="shortcut icon" href="https://raw.githubusercontent.com/DylanGore/Iris/master/assets/branding/favicon.ico" type="image/x-icon">
     <link rel="icon" href="https://raw.githubusercontent.com/DylanGore/Iris/master/assets/branding/favicon.ico" type="image/x-icon">
 
     <title>Iris | Documentation</title>
 </head>
-<body>
-	<header>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-            <a href="https://dylangore.github.io/Iris" class="navbar-brand"><i class="fas fa-eye"></i> Iris</a>
 
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#topNav" aria-controls="topNav" aria-expanded="false" aria-label="Toggle navigation">
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <a href="https://dylangore.github.io/Iris" class="navbar-brand">
+                <i class="fas fa-eye"></i> Iris</a>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#topNav" aria-controls="topNav" aria-expanded="false"
+                aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
 
             <div class="collapse navbar-collapse" id="topNav">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="https://dylangore.github.io/Iris"><i class="fa fa-home"></i>&nbsp;Home</a>
+                        <a class="nav-link" href="https://dylangore.github.io/Iris">
+                            <i class="fa fa-home"></i>&nbsp;Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="about.html"><i class="fa fa-info-circle"></i>&nbsp;About</a>
+                        <a class="nav-link" href="about.html">
+                            <i class="fa fa-info-circle"></i>&nbsp;About</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="docs.html"><i class="fa fa-book"></i>&nbsp;Documentation</a>
+                        <a class="nav-link" href="docs.html">
+                            <i class="fa fa-book"></i>&nbsp;Documentation</a>
                     </li>
                 </ul>
             </div>
         </nav>
     </header>
 
-   <main class="animated fadeIn">
+    <main class="animated fadeIn">
+        <!-- Start container -->
         <div class="container">
+            <!-- Start Row: Table of Contents -->
             <div class="row">
                 <div class="col">
                     <h1 class="text-center">Documentation</h1>
+                    <hr> Table of Contents:
+                    <ol>
+                        <li>
+                            <a href="#rpi-initial-setup">Raspberry Pi Initial Setup</a>
+                        </li>
+                        <li>
+                            <a href="#install-dependancies">Install Dependancies</a>
+                        </li>
+                        <li>
+                            <a href="#compile-opencv">Compile OpenCV from Source</a>
+                        </li>
+                        <li>
+                            <a href="#configure-web">Configure Web Server</a>
+                        </li>
+                        <li>
+                            <a href="#setup-iris">Setup Iris</a>
+                        </li>
+                    </ol>
                     <hr>
+                </div>
+            </div>
+            <!-- End Row: Table of Contents -->
+
+            <!-- Start Row: RPi Initial Setup -->
+            <div class="row">
+                <div class="col-sm-12">
+                    <h2 class="display-4" id="rpi-initial-setup">Raspberry Pi Initial Setup</h2>
+                    <p class="lead">This guide assumes that you have already setup network and users</p>
+                    <ol>
+                        <li>
+                            <b>Update the Pi</b><br>
+                            <code>sudo apt update -y && sudo apt upgrade -y</code>
+                        </li>
+                        <li>
+                            <b>Configure the Pi</b>
+                            <ol>
+                                <li>
+                                    Run raspi-config<br>
+                                    <code>sudo raspi-config</code>
+                                </li>
+                                <li>
+                                    Enable the camera module<br>
+                                    go to <i>Interfacing Options</i> and enable the camera module.
+                                </li>
+                                <li>
+                                    Expand the file system<br>
+                                    go to <i>Advanced options</i> and <i>Expand file system</i>.
+                                </li>
+                                <li>
+                                    Reboot<br>
+                                    <code>sudo reboot now</code>
+                                </li>
+                            </ol>
+                        </li>
+                        <li>
+                            <b>Update the firmware</b><br>
+                            <code>sudo rpi-update </code>
+                        </li>
+                        <li>
+                            <b>Reboot</b><br>
+                            <code>sudo reboot now</code>
+                        </li>
+                    </ol>
+                    <hr>
+                </div>
+            </div>
+            <!-- End Row: RPi Initial Setup -->
+
+            <!-- Start Row: Install Dependancies -->
+            <div class="row">
+                <div class="col-sm-12">
+                    <h2 class="display-4" id="install-dependanceis">Install Dependancies</h2>
+                    <ol>
+                        <li>
+                            <b>Install screen</b><br>
+                            Screen is used for running multiple shells at once, this is required if you intend on running multiple components of Iris on the same machine.<br>
+                            <code>sudo apt install screen -y</code>
+                        </li>
+                        <li>
+                            <b><i>(Optional)</i> Install bindfs</b><br>
+                            While not required, <i>bindfs</i> allows you to mount a directory and access it as if it was your own, this is especially useful for Nginx webroots for example.<br>
+                            <code>sudo apt install bindfs -y</code>
+                        </li>
+                        <li>
+                            <b>Install git</b><br>
+                            <code>sudo apt install git -y</code>
+                        </li>
+                        <li>
+                            <b>Install pip3</b><br>
+                            <code>sudo apt install python-pip3 -y</code>
+                        </li>
+                    </ol>
+                    <hr>
+                </div>
+            </div>
+            <!-- End Row: Install Dependanceis -->
+
+            <!-- Start Row: Compile OpenCV -->
+            <div class="row">
+                <div class="col-sm-12">
+                    <h2 class="display-4" id="compile-opencv">Compile OpenCV</h2>
                     <p>
-                        Table of Contents:
-                        <ol>
-                            <li><a href="#rpi-initial-setup">Raspberry Pi Initial Setup</a></li>
-                        </ol>
+                        To compile OpenCV, please follow the instructions on the web page linked below:<br>
+                        <a href="http://pythonopencv.com/how-to-easily-install-opencv-3-on-raspberry-pi-23-in-raspbian-without-using-virtual-environments/" target="_blanl">Compile OpenCV on Raspberry Pi</a><br>
+                        Please note that you need to compile it for <b>Python 3</b> and not Python 2.
                     </p>
                     <hr>
                 </div>
             </div>
+            <!-- End Row: Compile OpenCV -->
+
+            <!-- Start Row: Configure Web Serevr -->
             <div class="row">
                 <div class="col-sm-12">
-                    <h2 class="display-4" id="rpi-initial-setup">Raspberry Pi Initial Setup</h2>
-                     <p>
-                        <ol>
-                            <li>This guide assumes that you have already setup network and users</li>
-                            <li>
-                                Update the Pi<br>
-                                <code>
-                                    $ sudo apt update -y && sudo apt upgrade -y
-                                </code>
-                            </li>
-                            <li>
-                                Configure the Pi
-                                <ol>
-                                    <li><code>
-                                            $ sudo raspi-config
-                                        </code><br></li>
-                                    <li>
-                                            Enable the camera module<br>
-                                            go to <i>Interfacing Options</i> and enable the camera module.
-                                    </li>
-                                    <li>
-                                            Expand the file system<br>
-                                            go to <i>Advanced options</i> and <i>Expand file system</i>.
-                                    </li>
-                                    <li>
-                                            Reboot <br>
-                                            <code>$ sudo reboot now</code>
-                                    </li>
-                                </ol>
-                            </li>
-                            <li>
-                                Update the firmware<br>
-                                <code>$ sudo rpi-update </code>
-                            </li>
-                            <li>
-                                Reboot<br>
-                                <code>$ sudo reboot now</code>
-                            </li>
-                        </ol>
-                     </p>
-                     <hr>
-                     <br>
-                     <br>
-                     <br>
-                     <br>
+                    <h2 class="display-4" id="configure-web">Configure Web Server</h2>
+                    <h3 class="text-muted">Nginx <i>(Preferred)</i></h3>
+                    <ol>
+                        <li>
+                            <b>Install Nginx</b><br>
+                            <code>sudo apt install nginx -y</code>
+                        </li>
+                        <li>
+                            Add your own user to the www-data group <br>
+                            <code>sudo usermod -a -G www-data dylan</code>
+                        </li>
+                        <li>
+                            <b>Modify the default configuration file</b><br>
+                            <code>sudo nano /etc/nginx/sites-available/default</code><br>
+                            using the <a href="#">Iris nginx configuration file</a> as a guideline. <br>
+                            Don't forget to Make changes to the directories and URL as needed.
+                        </li>
+                        <li>
+                            <b><i>(Optional)</i> Setup Nginx error pages</b><br>
+                            Nginx is already configured to look for error pages in <code>/var/www/iris/errors/</code>, all you need to do is put the required files in there. <br>
+                            <a href="#">400.html</a> | Error 400 - Bad Request <br>
+                            <a href="#">403.html</a> | Error 403 - Permission Denied <br>
+                            <a href="#">404.html</a> | Error 404 - Not Found <br>
+                            You may use the examples above or replace them with your own.
+                        </li>
+                    </ol>
+                    <h3 class="text-muted">Apache</h3>
+                    <p>Coming Soon.</p>
+                    <hr>
                 </div>
             </div>
+            <!-- End Row: Configure Web Server -->
+
+            <!-- Start Row: Setup Iris -->
+            <div class="row">
+                <div class="col-sm-12">
+                    <h2 class="display-4" id="setup-iris">Setup Iris</h2>
+                    <ol>
+                        <li>
+                            <b>Change to your home directory</b><br>
+                            <code>cd ~</code>
+                        </li>
+                        <li>
+                            <b>Clone the Iris repo from GitHub</b><br>
+                            <code>git clone https://github.com/DylanGore/Iris/Iris.git "iris"</code><br>
+                            and cd into it<br>
+                            <code>cd iris/</code>
+                        </li>
+                        <li>
+                            <b>Setup Django</b><br>
+                            Change into the correct directory<br>
+                            <code>$ cd src/web/</code><br>
+                            Install Python dependancies via pip<br>
+                            <code>sudo pip3 install -r requirements.txt</code>
+                        </li>
+                        <li>
+                            <b>Configure Django for a live environment</b><br>
+                            Edit the django settings file<br>
+                            <code>nano irisPrime/settings.py</code><br>
+                            and modify the following settings:
+                                <ul>
+                                    <li>Change <code>SECRET_KEY = 'PUT_SECRET_KEY_HERE'</code> - <a href="#">Generate a new secret key</a> and replace <code>PUT_SECRET_KEY_HERE</code> with it.</li>
+                                    <li>Change <code>DEBUG = True</code> to <code>DEBUG = False</code></li>
+                                    <li>Change <code>ALLOWED_HOSTS = []</code> to <code>ALLOWED_HOSTS = ['BASE_URL']</code></li>
+                                    <li>Add <code>STATIC_ROOT = '/var/www/iris/static/'</code> under <code>STATIC_URL = '/static/'</code> (this is the web accessible directory where the static files go) </li>
+                                </ul>
+                        </li>
+                        <li>
+                            <b>Collect the static files and move them to the <code>STATIC_ROOT</code> directory</b><br>
+                            <code>python3 manage.py collectstatic</code>
+                        </li>
+                        <li>
+                            <b>Create the database</b><br>
+                            <code>python3 manage.py migrate</code><br>
+                        </li>
+                        <li>
+                            <b>Create a superuser</b><br>
+                            <code>python3 manage.py createsuperuser</code><br>
+                            and follow the prompts to set the username, e-mail address and password.
+                        </li>
+                        <li>
+                            <b>Run the server</b><br>
+                            <code>python3 manage.py runserver</code>
+                        </li>
+                    </ol>
+                    <hr>
+                </div>
+            </div>
+            <!-- End Row: Setup Iris -->
+
         </div>
-   </main>
+        <!-- End Container -->
+        <br>
+        <br>
+    </main>
 
     <footer class="page-footer bg-dark center-text">
         <div class="container">
             <div class="row">
                 <div class="col-sm-12">
                     <p class="text-center">
-                        <span class="float-left" id="copyright-text">&copy; 2018 <a class="footer-link" href="https://dylangore.ie" target="_blank">Dylan Gore</a>.</span>
-                        <a href="https://github.com/DylanGore/Iris" target="_blank" title="Iris on Github" class="float-right footer-link" id="github-link"><i class="fab fa-github"></i> View on Github</a>
+                        <span class="float-left" id="copyright-text">&copy; 2018
+                            <a class="footer-link" href="https://dylangore.ie" target="_blank">Dylan Gore</a>.</span>
+                        <a href="https://github.com/DylanGore/Iris" target="_blank" title="Iris on Github" class="float-right footer-link" id="github-link">
+                            <i class="fab fa-github"></i> View on Github</a>
                     </p>
                 </div>
             </div>
         </div>
     </footer>
-	
+
     <!-- Scripts -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-  </body>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+</body>
+
 </html>
