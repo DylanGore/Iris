@@ -93,36 +93,44 @@
                     <p class="lead">This guide assumes that you have already setup network and users</p>
                     <ol>
                         <li>
-                            <b>Update the Pi</b><br>
+                            <b>Update the Pi</b>
+                            <br>
                             <code>sudo apt update -y && sudo apt upgrade -y</code>
                         </li>
                         <li>
                             <b>Configure the Pi</b>
                             <ol>
                                 <li>
-                                    Run raspi-config<br>
+                                    Run raspi-config
+                                    <br>
                                     <code>sudo raspi-config</code>
                                 </li>
                                 <li>
-                                    Enable the camera module<br>
-                                    go to <i>Interfacing Options</i> and enable the camera module.
+                                    Enable the camera module
+                                    <br> go to
+                                    <i>Interfacing Options</i> and enable the camera module.
                                 </li>
                                 <li>
-                                    Expand the file system<br>
-                                    go to <i>Advanced options</i> and <i>Expand file system</i>.
+                                    Expand the file system
+                                    <br> go to
+                                    <i>Advanced options</i> and
+                                    <i>Expand file system</i>.
                                 </li>
                                 <li>
-                                    Reboot<br>
+                                    Reboot
+                                    <br>
                                     <code>sudo reboot now</code>
                                 </li>
                             </ol>
                         </li>
                         <li>
-                            <b>Update the firmware</b><br>
+                            <b>Update the firmware</b>
+                            <br>
                             <code>sudo rpi-update </code>
                         </li>
                         <li>
-                            <b>Reboot</b><br>
+                            <b>Reboot</b>
+                            <br>
                             <code>sudo reboot now</code>
                         </li>
                     </ol>
@@ -137,21 +145,29 @@
                     <h2 class="display-4" id="install-dependanceis">Install Dependancies</h2>
                     <ol>
                         <li>
-                            <b>Install screen</b><br>
-                            Screen is used for running multiple shells at once, this is required if you intend on running multiple components of Iris on the same machine.<br>
+                            <b>Install screen</b>
+                            <br> Screen is used for running multiple shells at once, this is required if you intend on running
+                            multiple components of Iris on the same machine.
+                            <br>
                             <code>sudo apt install screen -y</code>
                         </li>
                         <li>
-                            <b><i>(Optional)</i> Install bindfs</b><br>
-                            While not required, <i>bindfs</i> allows you to mount a directory and access it as if it was your own, this is especially useful for Nginx webroots for example.<br>
+                            <b>
+                                <i>(Optional)</i> Install bindfs</b>
+                            <br> While not required,
+                            <i>bindfs</i> allows you to mount a directory and access it as if it was your own, this is especially
+                            useful for Nginx webroots for example.
+                            <br>
                             <code>sudo apt install bindfs -y</code>
                         </li>
                         <li>
-                            <b>Install git</b><br>
+                            <b>Install git</b>
+                            <br>
                             <code>sudo apt install git -y</code>
                         </li>
                         <li>
-                            <b>Install pip3</b><br>
+                            <b>Install pip3</b>
+                            <br>
                             <code>sudo apt install python-pip3 -y</code>
                         </li>
                     </ol>
@@ -165,9 +181,12 @@
                 <div class="col-sm-12">
                     <h2 class="display-4" id="compile-opencv">Compile OpenCV</h2>
                     <p>
-                        To compile OpenCV, please follow the instructions on the web page linked below:<br>
-                        <a href="http://pythonopencv.com/how-to-easily-install-opencv-3-on-raspberry-pi-23-in-raspbian-without-using-virtual-environments/" target="_blanl">Compile OpenCV on Raspberry Pi</a><br>
-                        Please note that you need to compile it for <b>Python 3</b> and not Python 2.
+                        To compile OpenCV, please follow the instructions on the web page linked below:
+                        <br>
+                        <a href="http://pythonopencv.com/how-to-easily-install-opencv-3-on-raspberry-pi-23-in-raspbian-without-using-virtual-environments/"
+                            target="_blank">Compile OpenCV on Raspberry Pi</a>
+                        <br> Please note that you need to compile it for
+                        <b>Python 3</b> and not Python 2.
                     </p>
                     <hr>
                 </div>
@@ -178,29 +197,40 @@
             <div class="row">
                 <div class="col-sm-12">
                     <h2 class="display-4" id="configure-web">Configure Web Server</h2>
-                    <h3 class="text-muted">Nginx <i>(Preferred)</i></h3>
+                    <h3 class="text-muted">Nginx
+                        <i>(Preferred)</i>
+                    </h3>
                     <ol>
                         <li>
-                            <b>Install Nginx</b><br>
+                            <b>Install Nginx</b>
+                            <br>
                             <code>sudo apt install nginx -y</code>
                         </li>
                         <li>
-                            Add your own user to the www-data group <br>
+                            Add your own user to the www-data group
+                            <br>
                             <code>sudo usermod -a -G www-data dylan</code>
                         </li>
                         <li>
-                            <b>Modify the default configuration file</b><br>
-                            <code>sudo nano /etc/nginx/sites-available/default</code><br>
-                            using the <a href="#">Iris nginx configuration file</a> as a guideline. <br>
-                            Don't forget to Make changes to the directories and URL as needed.
+                            <b>Modify the default configuration file</b>
+                            <br>
+                            <code>sudo nano /etc/nginx/sites-available/default</code>
+                            <br> using the
+                            <a href="#">Iris nginx configuration file</a> as a guideline.
+                            <br> Don't forget to Make changes to the directories and URL as needed.
                         </li>
                         <li>
-                            <b><i>(Optional)</i> Setup Nginx error pages</b><br>
-                            Nginx is already configured to look for error pages in <code>/var/www/iris/errors/</code>, all you need to do is put the required files in there. <br>
-                            <a href="#">400.html</a> | Error 400 - Bad Request <br>
-                            <a href="#">403.html</a> | Error 403 - Permission Denied <br>
-                            <a href="#">404.html</a> | Error 404 - Not Found <br>
-                            You may use the examples above or replace them with your own.
+                            <b>
+                                <i>(Optional)</i> Setup Nginx error pages</b>
+                            <br> Nginx is already configured to look for error pages in
+                            <code>/var/www/iris/errors/</code>, all you need to do is put the required files in there.
+                            <br>
+                            <a href="#">400.html</a> | Error 400 - Bad Request
+                            <br>
+                            <a href="#">403.html</a> | Error 403 - Permission Denied
+                            <br>
+                            <a href="#">404.html</a> | Error 404 - Not Found
+                            <br> You may use the examples above or replace them with your own.
                         </li>
                     </ol>
                     <h3 class="text-muted">Apache</h3>
@@ -216,49 +246,73 @@
                     <h2 class="display-4" id="setup-iris">Setup Iris</h2>
                     <ol>
                         <li>
-                            <b>Change to your home directory</b><br>
+                            <b>Change to your home directory</b>
+                            <br>
                             <code>cd ~</code>
                         </li>
                         <li>
-                            <b>Clone the Iris repo from GitHub</b><br>
-                            <code>git clone https://github.com/DylanGore/Iris/Iris.git "iris"</code><br>
-                            and cd into it<br>
+                            <b>Clone the Iris repo from GitHub</b>
+                            <br>
+                            <code>git clone https://github.com/DylanGore/Iris/Iris.git "iris"</code>
+                            <br> and cd into it
+                            <br>
                             <code>cd iris/</code>
                         </li>
                         <li>
-                            <b>Setup Django</b><br>
-                            Change into the correct directory<br>
-                            <code>$ cd src/web/</code><br>
-                            Install Python dependancies via pip<br>
+                            <b>Setup Django</b>
+                            <br> Change into the correct directory
+                            <br>
+                            <code>cd src/web/</code>
+                            <br> Install Python dependancies via pip
+                            <br>
                             <code>sudo pip3 install -r requirements.txt</code>
                         </li>
                         <li>
-                            <b>Configure Django for a live environment</b><br>
-                            Edit the django settings file<br>
-                            <code>nano irisPrime/settings.py</code><br>
-                            and modify the following settings:
-                                <ul>
-                                    <li>Change <code>SECRET_KEY = 'PUT_SECRET_KEY_HERE'</code> - <a href="#">Generate a new secret key</a> and replace <code>PUT_SECRET_KEY_HERE</code> with it.</li>
-                                    <li>Change <code>DEBUG = True</code> to <code>DEBUG = False</code></li>
-                                    <li>Change <code>ALLOWED_HOSTS = []</code> to <code>ALLOWED_HOSTS = ['BASE_URL']</code></li>
-                                    <li>Add <code>STATIC_ROOT = '/var/www/iris/static/'</code> under <code>STATIC_URL = '/static/'</code> (this is the web accessible directory where the static files go) </li>
-                                </ul>
+                            <b>Configure Django for a live environment</b>
+                            <br> Edit the django settings file
+                            <br>
+                            <code>nano irisPrime/settings.py</code>
+                            <br> and modify the following settings:
+                            <ul>
+                                <li>Change
+                                    <code>SECRET_KEY = 'PUT_SECRET_KEY_HERE'</code> -
+                                    <a href="https://www.miniwebtool.com/django-secret-key-generator/" target="_blank">Generate a new secret key</a> and replace
+                                    <code>PUT_SECRET_KEY_HERE</code> with it.</li>
+                                <li>Change
+                                    <code>DEBUG = True</code> to
+                                    <code>DEBUG = False</code>
+                                </li>
+                                <li>Change
+                                    <code>ALLOWED_HOSTS = []</code> to
+                                    <code>ALLOWED_HOSTS = ['BASE_URL']</code>
+                                </li>
+                                <li>Add
+                                    <code>STATIC_ROOT = '/var/www/iris/static/'</code> under
+                                    <code>STATIC_URL = '/static/'</code> (this is the web accessible directory where the static
+                                    files go) </li>
+                            </ul>
                         </li>
                         <li>
-                            <b>Collect the static files and move them to the <code>STATIC_ROOT</code> directory</b><br>
+                            <b>Collect the static files and move them to the
+                                <code>STATIC_ROOT</code> directory</b>
+                            <br>
                             <code>python3 manage.py collectstatic</code>
                         </li>
                         <li>
-                            <b>Create the database</b><br>
-                            <code>python3 manage.py migrate</code><br>
+                            <b>Create the database</b>
+                            <br>
+                            <code>python3 manage.py migrate</code>
+                            <br>
                         </li>
                         <li>
-                            <b>Create a superuser</b><br>
-                            <code>python3 manage.py createsuperuser</code><br>
-                            and follow the prompts to set the username, e-mail address and password.
+                            <b>Create a superuser</b>
+                            <br>
+                            <code>python3 manage.py createsuperuser</code>
+                            <br> and follow the prompts to set the username, e-mail address and password.
                         </li>
                         <li>
-                            <b>Run the server</b><br>
+                            <b>Run the server</b>
+                            <br>
                             <code>python3 manage.py runserver</code>
                         </li>
                     </ol>
