@@ -1,0 +1,3 @@
+[submodule "src/camera-server"]
+	path = src/camera-server
+	url = https://github.com/DylanGore/Iris-Camera-Server.git
