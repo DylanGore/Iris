@@ -5,6 +5,7 @@ import buzzer as buzzer
 import subprocess as sp
 from time import sleep
 from helper import *
+from pb import sendPush
 import variables
 import camera 
 import api
@@ -29,6 +30,7 @@ try:
 		mtnInput = getGPIOInput(mtnPin)
 		if mtnInput == False:
 			log('MAIN - Motion Detected!')
+			sendPush('Motion Detected', 'Motion has been detected on this camera!')
 			api.updateTrigger(1)
 			buzzer.buzz()
 			camera_running = True

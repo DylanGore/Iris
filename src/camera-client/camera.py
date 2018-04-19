@@ -3,13 +3,12 @@
 from time import sleep
 from helper import * 
 import time
-import subprocess as sp
+import picamera
 
 def runCamera(run_time):
     end_time = time.time() + run_time
+    cam = picamera.PiCamera()
     if time.time() < end_time:
-        log('CAMERA - runnning mjpeg script')
-        example = sp.Popen(['python3','mjpeg.py']) # runs myPyScript.py 
+        log('CAMERA - taking photos')
+        cam.capture('/home/dylan/iris_output/img-' + time + '.jpg')
         sleep(1)
-
-    example.kill()
