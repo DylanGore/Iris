@@ -223,7 +223,7 @@
                             <b>
                                 <i>(Optional)</i> Setup Nginx error pages</b>
                             <br> Nginx is already configured to look for error pages in
-                            <code>/var/www/iris/errors/</code>, all you need to do is put the required files in there.
+                            <code>/var/www/iris/error/</code>, all you need to do is put the required files in there.
                             <br>
                             <a href="#">400.html</a> | Error 400 - Bad Request
                             <br>
@@ -253,7 +253,7 @@
                         <li>
                             <b>Clone the Iris repo from GitHub</b>
                             <br>
-                            <code>git clone https://github.com/DylanGore/Iris/Iris.git "iris"</code>
+                            <code>git clone --recurse-submodules https://github.com/DylanGore/Iris.git "iris"</code>
                             <br> and cd into it
                             <br>
                             <code>cd iris/</code>
@@ -301,7 +301,7 @@
                         <li>
                             <b>Create the database</b>
                             <br>
-                            <code>python3 manage.py migrate</code>
+                            <code>python3 manage.py migrate --run-syncdb</code>
                             <br>
                         </li>
                         <li>
