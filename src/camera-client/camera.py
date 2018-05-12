@@ -1,4 +1,4 @@
-#! /usr/bin/python3
+#!/usr/bin/python3
 
 from time import sleep
 from helper import * 
@@ -6,6 +6,7 @@ import time
 import datetime
 import picamera
 
+# Takes photo
 def runCamera(run_time):
     curr_time = time.time()
     end_time = curr_time + run_time

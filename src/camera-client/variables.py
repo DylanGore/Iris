@@ -1,4 +1,4 @@
-#! /usr/bin/python3
+#!/usr/bin/python3
 
 # Iris API
 IRIS_API_KEY = 'IRIS_API_KEY'

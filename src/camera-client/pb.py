@@ -1,8 +1,9 @@
-#! /usr/local/bin/python3
+#!/usr/local/bin/python3
 
 from pushbullet import Pushbullet
 from variables import PUSHBULLET_API_KEY
 
+# Init Pushbullet 
 pb = Pushbullet(PUSHBULLET_API_KEY)
 
 # Send push
